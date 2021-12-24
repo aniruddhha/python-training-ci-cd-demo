@@ -6,6 +6,14 @@ app = Flask(__name__)
 api = Api(app)
 
 
+class DeafultResource(Resource):
+    def get(self):
+        return {
+            'sts': 'success',
+            'msg': 'deploying flask app on aws'
+        }
+
+
 class BatResource(Resource):
     def get(self):
         return {
@@ -26,6 +34,10 @@ class BatResource(Resource):
         }
 
 
+api.add_resource(
+    DeafultResource,  # shape of user resource
+    '/'
+)
 api.add_resource(
     BatResource,  # shape of user resource
     '/bat'
