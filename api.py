@@ -17,6 +17,7 @@ class BatResource(Resource):
     def post(self):
 
         obj = request.get_json()
+        print(obj)
 
         return {
             'sts': 'success',
