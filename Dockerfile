@@ -2,7 +2,7 @@ FROM python:latest
 
 RUN pip3 install pipenv
 
-ENV PROJECT_DIR /restapidemo
+ENV PROJECT_DIR /rest-api-cicd
 
 WORKDIR ${PROJECT_DIR}
 
