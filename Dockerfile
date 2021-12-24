@@ -14,6 +14,6 @@ COPY . .
 
 RUN pipenv install --deploy 
 
-EXPOSE 5000
+EXPOSE 80
 
 CMD ["pipenv", "run", "python", "api.py"]
