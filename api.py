@@ -34,6 +34,14 @@ class BatResource(Resource):
         }
 
 
+class CatResource(Resource):
+    def get(self):
+        return {
+            'sts': 'success',
+            'msg': 'mewooo'
+        }
+
+
 api.add_resource(
     DeafultResource,  # shape of user resource
     '/'
@@ -41,6 +49,10 @@ api.add_resource(
 api.add_resource(
     BatResource,  # shape of user resource
     '/bat'
+)
+api.add_resource(
+    CatResource,  # shape of user resource
+    '/cat'
 )
 
 if __name__ == '__main__':
