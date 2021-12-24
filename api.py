@@ -14,6 +14,16 @@ class BatResource(Resource):
             'res': '1 + 1 = 2'
         }
 
+    def post(self):
+
+        obj = request.get_json()
+
+        return {
+            'sts': 'success',
+            'msg': 'data posted',
+            'res': obj
+        }
+
 
 api.add_resource(
     BatResource,  # shape of user resource
