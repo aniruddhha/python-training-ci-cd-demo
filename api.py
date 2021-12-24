@@ -20,7 +20,7 @@ class BatResource(Resource):
 
         return {
             'sts': 'success',
-            'msg': 'data posted',
+            'msg': 'data posted successfully',
             'res': obj
         }
 
